@@ -1,19 +1,15 @@
 #/bin/sh
-diff=`ls`
 
-trap 'ls -a' 11
+#trap 'ls -a' 11
+filename='test_file'
 
+cp $1 $filename
+./update_binary $filename
 
-yolo=`./segfault_program`
-normal='yolo'
-if [ yolo -eq normal ]
-then
-    echo test
-fi
-#echo $yolo
-read -p 'binary to test: ' binary
-#echo $binary
-#if [ -e malloc ]
-#then
-#    echo $diff
-#fi
+export LD_PRELOAD=/home/nithramir/C/segfault_detector/malloc
+for i in `seq 0 10`;
+do
+    export NB_MALLOC=$i
+    ./$filename > random
+    echo $test
+done

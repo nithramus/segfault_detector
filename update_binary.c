@@ -60,7 +60,5 @@ int main(int argc, char **argv)
     ft_printf("%zu\n", ptr);
     lseek(fd, (off_t)ptr, SEEK_SET);
     write(fd, "maloic\0", 7);
-    // fclose(fd);
     return 0;
-
 }
