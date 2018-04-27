@@ -5,6 +5,11 @@
 {
     // char *ptr;
     char *ptr = malloc(5);
+    
+    ptr[0] = 't';
+
+    ptr = malloc(5);
+    
     ptr[0] = 't';
     write(1,"yolo\n", 5);   
     // ptr = NULL;

@@ -14,14 +14,15 @@ void *maloic(size_t size)
     int value;
     static int nb_malloc = 0;
 
-    ft_putstr("malloc\n");
+    // ft_putstr("malloc\n");
+    nb_malloc++;
     stop_after = getenv("NB_MALLOC");
     if (!stop_after)
     {
         ft_putstr("No env variable\n");
         exit(0);
     }
-    ft_putstr(stop_after);
+    // ft_putstr(stop_after);
     value = atoi(stop_after);
     if (nb_malloc == value)
         return (NULL);

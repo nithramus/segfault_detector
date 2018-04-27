@@ -47,7 +47,7 @@ int main(int argc, char **argv)
         perror("fstat: ");
         return 0;
     }
-    ft_printf("%zu\n", buf.st_size);
+    // ft_printf("%zu\n", buf.st_size);
     file = malloc(buf.st_size);
     int value = read(fd, file, buf.st_size);
     // ft_putnbr(value);
@@ -57,7 +57,7 @@ int main(int argc, char **argv)
         return 0;
     }
     size_t ptr = ft_strnnstr(file, "malloc\0", buf.st_size);
-    ft_printf("%zu\n", ptr);
+    // ft_printf("%zu\n", ptr);
     lseek(fd, (off_t)ptr, SEEK_SET);
     write(fd, "maloic\0", 7);
     return 0;
