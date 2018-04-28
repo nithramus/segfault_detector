@@ -7,9 +7,9 @@ cp $1 $filename
 ./update_binary $filename
 
 export LD_PRELOAD=/home/nithramir/C/segfault_detector/malloc
-for i in `seq 0 10`;
+for i in `seq 0 200`;
 do
     echo $i
     export NB_MALLOC=$i
-    ./$filename > yolo
+    ./$filename -R ~ > yolo
 done
