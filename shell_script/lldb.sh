@@ -1,0 +1,1 @@
+lldb ../binary/test_file < run

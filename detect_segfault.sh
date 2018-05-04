@@ -11,7 +11,7 @@ cp $1 $filename
 ./binary/update_binary $filename
 
 #export LD_PRELOAD=/home/nithramir/C/segfault_detector/malloc
-export DYLD_LIBRARY_PATH=.
+export DYLD_LIBRARY_PATH=./binary
 export DYLD_INSERT_LIBRARIES="binary/malloc" 
 export DYLD_FORCE_FLAT_NAMESPACE=1
 for i in `seq 0 $3`;

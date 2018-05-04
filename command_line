@@ -1,0 +1,9 @@
+ls
+pwd
+env
+setenv yolo test
+unsetenv fghgjh
+unsetenv yolo
+exit
+exit
+exit

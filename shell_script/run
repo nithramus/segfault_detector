@@ -1,0 +1,4 @@
+env DYLD_LIBRARY_PATH=../binary
+env DYLD_INSERT_LIBRARIES="../binary/malloc" 
+env DYLD_FORCE_FLAT_NAMESPACE=1
+run
