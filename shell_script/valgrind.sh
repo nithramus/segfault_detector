@@ -6,8 +6,8 @@ export DYLD_INSERT_LIBRARIES="../binary/malloc"
 export DYLD_FORCE_FLAT_NAMESPACE=1
 #
 #echo $2
-export NB_MALLOC=2
-valgrind ./$filename -R ~ > yolo
+export NB_MALLOC=$2
+valgrind ./$filename $1
 
 
 # lldb $filename < run
