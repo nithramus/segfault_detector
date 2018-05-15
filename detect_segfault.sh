@@ -14,10 +14,10 @@ cp $1 $filename
 export DYLD_LIBRARY_PATH=./binary
 export DYLD_INSERT_LIBRARIES="binary/malloc" 
 export DYLD_FORCE_FLAT_NAMESPACE=1
+	rm -f sortie
 for i in `seq 0 $3`;
 do
     echo $i
     export NB_MALLOC=$i
-	rm -f yolo
     ./$filename $2 >> sortie
 done
