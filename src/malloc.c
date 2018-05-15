@@ -14,7 +14,7 @@ void *maloic(size_t size)
     int value;
     static int nb_malloc = -1;
 
-    // ft_putstr("malloc\n");
+    ft_putstr("malloic\n");
     nb_malloc++;
     stop_after = getenv("NB_MALLOC");
     if (!stop_after)
